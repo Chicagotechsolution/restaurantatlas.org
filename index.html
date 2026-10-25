@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restaurant Atlas — A Working Reference for Independent Restaurant Operators</title>
+<meta name="description" content="Restaurant Atlas is an operator's reference in progress: plain-language guides on POS systems, delivery economics, staffing, and margins for independent restaurants.">
+<link rel="canonical" href="https://restaurantatlas.org/">
+<meta property="og:title" content="Restaurant Atlas — the operator's reference">
+<meta property="og:description" content="Plain-language guides on POS, delivery economics, staffing, and margins for independent restaurant operators.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://restaurantatlas.org/">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23201D1A'/%3E%3Cpath d='M7 25V7h7a5 5 0 0 1 0 10h-7m7 0l7 8' fill='none' stroke='%23F3EFE7' stroke-width='2.6'/%3E%3Cpath d='M22 7h4v4' fill='none' stroke='%23A33B2E' stroke-width='2.6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Restaurant Atlas","url":"https://restaurantatlas.org/","description":"An operator's reference of plain-language guides on POS systems, delivery economics, staffing, and margins for independent restaurants.","inLanguage":"en-US"}
+</script>
+<style>
+:root{
+  --paper:#F7F4EC; --ink:#201D1A; --oxblood:#A33B2E; --steel:#35556B;
+  --rule:#C9C2B2; --shade:#EDE8DB; --faint:#6E6758;
+  --disp:"Red Hat Display",system-ui,sans-serif; --serif:"Source Serif 4",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:17.5px;line-height:1.65}
+a{color:var(--steel)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--oxblood);outline-offset:2px}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+.masthead{border-bottom:3px double var(--ink)}
+.masthead .top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:16px 0 12px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink)}
+.brand b{font-family:var(--disp);font-weight:900;font-size:1.45rem;letter-spacing:-.01em}
+.masthead .tagline{font-style:italic;color:var(--faint);font-size:.95rem}
+nav.main{border-top:1px solid var(--rule);display:flex;gap:26px;flex-wrap:wrap;padding:10px 0}
+nav.main a{color:var(--ink);text-decoration:none;font-family:var(--disp);font-weight:700;font-size:.9rem}
+nav.main a:hover{color:var(--oxblood);text-decoration:underline;text-underline-offset:4px}
+.hero{padding:58px 0 50px;border-bottom:1px solid var(--rule)}
+.hero .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center}
+.hero h1{font-family:var(--disp);font-weight:900;font-size:clamp(2.1rem,4.8vw,3.4rem);line-height:1.06;letter-spacing:-.015em}
+.hero p.lede{margin-top:20px;font-size:1.14rem;max-width:56ch}
+.hero p.state{margin-top:16px;font-size:.95rem;color:var(--faint);font-style:italic}
+.hero .plate svg{width:100%;height:auto;display:block}
+section{padding:54px 0}
+h2{font-family:var(--disp);font-weight:700;font-size:clamp(1.45rem,2.8vw,2rem);line-height:1.15;margin-bottom:12px}
+.kicker{font-family:var(--disp);color:var(--oxblood);font-weight:700;font-size:.9rem;margin-bottom:8px}
+.index{border-bottom:1px solid var(--rule)}
+.index .intro{max-width:64ch;margin-bottom:8px}
+.collection{margin-top:34px}
+.collection h3{font-family:var(--disp);font-weight:700;font-size:1.15rem;border-bottom:2px solid var(--ink);padding-bottom:8px;display:flex;align-items:center;gap:10px}
+.collection h3 svg{flex:none}
+.entry{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--rule)}
+.entry .t{font-weight:600;font-size:1.04rem}
+.entry .d{display:block;font-size:.93rem;color:var(--faint);font-weight:400;margin-top:3px}
+.entry .status{font-family:var(--disp);font-size:.78rem;font-weight:700;white-space:nowrap;padding:4px 10px;border:1px solid var(--rule);color:var(--faint)}
+.entry .status.editing{border-color:var(--oxblood);color:var(--oxblood)}
+.method{background:var(--shade);border-bottom:1px solid var(--rule)}
+.method .cols{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:start}
+.method p{margin-bottom:13px;max-width:56ch}
+.method ol{margin:6px 0 0;padding-left:0;list-style:none;counter-reset:step}
+.method ol li{counter-increment:step;padding:13px 0 13px 44px;position:relative;border-bottom:1px dashed var(--rule)}
+.method ol li:last-child{border-bottom:0}
+.method ol li::before{content:counter(step);position:absolute;left:0;top:11px;width:28px;height:28px;border:2px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-family:var(--disp);font-weight:700;font-size:.9rem}
+.method ol b{font-family:var(--disp);font-weight:700;display:block;font-size:1rem}
+.method ol span{font-size:.95rem;color:#4A4336}
+.ledger{border-bottom:1px solid var(--rule)}
+.ledger figure{margin:24px 0 0;border:1.5px solid var(--ink);background:#fff}
+.ledger figure svg{width:100%;height:auto;display:block}
+.ledger figcaption{border-top:1.5px solid var(--ink);padding:10px 16px;font-size:.88rem;color:var(--faint);font-style:italic}
+.notify .grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:start}
+.notify form{display:grid;gap:13px;border:1.5px solid var(--ink);padding:26px;background:#fff}
+label{font-family:var(--disp);font-weight:700;font-size:.88rem}
+input{width:100%;padding:11px 12px;border:1.5px solid var(--ink);background:var(--paper);font:inherit;font-size:.96rem}
+.btn{display:inline-block;padding:12px 24px;background:var(--ink);color:var(--paper);font-family:var(--disp);font-weight:700;font-size:.95rem;border:0;cursor:pointer;text-decoration:none}
+.btn:hover{background:var(--oxblood)}
+.form-note{font-size:.86rem;color:var(--faint)}
+footer.site{border-top:3px double var(--ink);padding:36px 0 26px}
+footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px}
+footer h3{font-family:var(--disp);font-weight:700;font-size:1.05rem;margin-bottom:10px}
+footer a{color:var(--ink);text-decoration:none;display:block;padding:3px 0;font-size:.93rem}
+footer a:hover{color:var(--oxblood);text-decoration:underline}
+footer .fineprint{grid-column:1/-1;border-top:1px solid var(--rule);margin-top:22px;padding-top:14px;font-size:.84rem;color:var(--faint);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:860px){
+  .hero .grid,.method .cols,.notify .grid{grid-template-columns:1fr}
+  footer .wrap{grid-template-columns:1fr 1fr}
+}
+@media (max-width:540px){
+  .entry{grid-template-columns:1fr}
+  footer .wrap{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="/" aria-label="Restaurant Atlas home">
+        <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" fill="#201D1A"/><path d="M7 25V7h7a5 5 0 0 1 0 10h-7m7 0l7 8" fill="none" stroke="#F3EFE7" stroke-width="2.6"/><path d="M22 7h4v4" fill="none" stroke="#A33B2E" stroke-width="2.6"/></svg>
+        <b>Restaurant Atlas</b>
+      </a>
+      <span class="tagline">A working reference for independent operators</span>
+    </div>
+    <nav class="main" aria-label="Main">
+      <a href="#index">The index</a>
+      <a href="#method">How guides are written</a>
+      <a href="#ledger">The delivery ledger</a>
+      <a href="#notify">Get notified</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap grid">
+    <div>
+      <h1>The numbers behind running a restaurant, written down plainly.</h1>
+      <p class="lede">Restaurant Atlas is an operator's reference: what a POS contract actually costs, where delivery margins go, how to schedule a kitchen without burning it out. No vendor sponsorships, no affiliate links — guides an owner can hand to a manager.</p>
+      <p class="state">The first collection is in editing now. Everything below is the publishing index, not a promise of dates.</p>
+    </div>
+    <div class="plate" aria-hidden="true">
+      <svg viewBox="0 0 380 300">
+        <rect x="8" y="8" width="364" height="284" fill="#fff" stroke="#201D1A" stroke-width="2"/>
+        <line x1="8" y1="56" x2="372" y2="56" stroke="#201D1A" stroke-width="2"/>
+        <rect x="26" y="24" width="150" height="14" fill="#201D1A"/>
+        <rect x="300" y="24" width="52" height="14" fill="#A33B2E"/>
+        <g stroke="#C9C2B2" stroke-width="1.5">
+          <line x1="26" y1="88" x2="354" y2="88"/><line x1="26" y1="120" x2="354" y2="120"/>
+          <line x1="26" y1="152" x2="354" y2="152"/><line x1="26" y1="184" x2="354" y2="184"/>
+          <line x1="26" y1="216" x2="354" y2="216"/><line x1="26" y1="248" x2="354" y2="248"/>
+        </g>
+        <g fill="#35556B">
+          <rect x="26" y="74" width="120" height="8"/><rect x="26" y="106" width="96" height="8"/>
+          <rect x="26" y="138" width="138" height="8"/><rect x="26" y="170" width="84" height="8"/>
+          <rect x="26" y="202" width="110" height="8"/><rect x="26" y="234" width="70" height="8"/>
+        </g>
+        <g fill="#201D1A" text-anchor="end" font-family="Red Hat Display,sans-serif" font-size="13" font-weight="700">
+          <text x="354" y="82">2.9%</text><text x="354" y="114">$214</text>
+          <text x="354" y="146">30%</text><text x="354" y="178">$68</text>
+          <text x="354" y="210">18.5%</text><text x="354" y="242">$1.40</text>
+        </g>
+        <text x="26" y="276" font-family="Source Serif 4,Georgia,serif" font-style="italic" font-size="12" fill="#6E6758">Specimen page — illustrative figures only</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<section id="index" class="index">
+  <div class="wrap">
+    <p class="kicker">The publishing index</p>
+    <h2>Three collections, in the order operators asked for them.</h2>
+    <p class="intro">Each guide gets researched against real vendor contracts and operator interviews, then edited until a busy owner can read it in fifteen minutes. A guide ships when it's right, and its status here stays honest.</p>
+
+    <div class="collection">
+      <h3>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#201D1A" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg>
+        Collection one — Point of sale
+      </h3>
+      <div class="entry"><span class="t">What a POS quote leaves out<span class="d">Processing rates, hardware leases, and the fees that appear after month three.</span></span><span class="status editing">In editing</span></div>
+      <div class="entry"><span class="t">Switching POS without losing a week<span class="d">Menu migration, reprinting workflows, and training a line crew mid-service.</span></span><span class="status">Drafting</span></div>
+      <div class="entry"><span class="t">When a tablet is enough<span class="d">Counter-service setups that skip the full terminal install.</span></span><span class="status">Researching</span></div>
+    </div>
+
+    <div class="collection">
+      <h3>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#201D1A" stroke-width="2" aria-hidden="true"><path d="M3 18h13l3-7h-5l2-7-9 10h5z"/></svg>
+        Collection two — Delivery economics
+      </h3>
+      <div class="entry"><span class="t">The anatomy of a $30 delivery order<span class="d">Commission, payment fees, packaging, and what's left on the bone.</span></span><span class="status editing">In editing</span></div>
+      <div class="entry"><span class="t">Marketplace menu pricing that doesn't insult regulars<span class="d">How operators handle the delivery markup question in the open.</span></span><span class="status">Drafting</span></div>
+      <div class="entry"><span class="t">First-party ordering: when it pays for itself<span class="d">The honest math on running your own online ordering next to the marketplaces.</span></span><span class="status">Researching</span></div>
+    </div>
+
+    <div class="collection">
+      <h3>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#201D1A" stroke-width="2" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-4 3-6.5 6.5-6.5S15.5 16 15.5 20M16 4.6a3.5 3.5 0 0 1 0 6.8M17.5 13.7c2.4.8 4 2.9 4 6.3"/></svg>
+        Collection three — Staffing the floor
+      </h3>
+      <div class="entry"><span class="t">Scheduling a kitchen that people stay in<span class="d">Rotas, clopens, and the real cost of turnover per station.</span></span><span class="status">Drafting</span></div>
+      <div class="entry"><span class="t">Tipping structures, compared without ideology<span class="d">Pools, points, and service charges — how each plays out on a pay stub.</span></span><span class="status">Researching</span></div>
+      <div class="entry"><span class="t">Hiring your first manager<span class="d">What to delegate, what to keep, and how to write the job honestly.</span></span><span class="status">Researching</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="method" class="method">
+  <div class="wrap cols">
+    <div>
+      <p class="kicker">Method</p>
+      <h2>Why trust a guide from a site you've never heard of?</h2>
+      <p>You shouldn't — until you can check its work. Every Restaurant Atlas guide publishes with its sources attached: the contracts we read, the fee schedules we compared, and where the numbers came from. If a figure is an estimate, it says so in the sentence, not a footnote.</p>
+      <p>Nobody pays to be recommended. When a guide names vendors, it names the trade-offs too.</p>
+    </div>
+    <ol>
+      <li><b>Collect the paper</b><span>Real contracts, rate cards, and statements from operators who share them.</span></li>
+      <li><b>Interview operators</b><span>Owners and managers review drafts against their own numbers.</span></li>
+      <li><b>Edit for the pass line</b><span>If it can't be read between lunch and prep, it gets shorter.</span></li>
+      <li><b>Date it and revisit it</b><span>Every guide carries its last-checked date; stale guides get flagged, not quietly left up.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="ledger" class="ledger">
+  <div class="wrap">
+    <p class="kicker">From the first collection</p>
+    <h2>Where a delivery dollar goes.</h2>
+    <p style="max-width:62ch">A preview of the ledger style the delivery guides use: every cost named, nothing netted out behind a percentage. The figures below are an illustrative worked example, not data from any real restaurant.</p>
+    <figure>
+      <svg viewBox="0 0 760 260" role="img" aria-label="Illustrative stacked bar showing how a delivery order subtotal divides into food cost, commission, fees, packaging, labor, and remainder">
+        <rect width="760" height="260" fill="#fff"/>
+        <g font-family="Red Hat Display,sans-serif" font-size="14" font-weight="700" fill="#201D1A">
+          <text x="30" y="40">Illustrative $30.00 marketplace order</text>
+        </g>
+        <g>
+          <rect x="30" y="70" width="245" height="54" fill="#35556B"/>
+          <rect x="275" y="70" width="154" height="54" fill="#A33B2E"/>
+          <rect x="429" y="70" width="63" height="54" fill="#C57B45"/>
+          <rect x="492" y="70" width="42" height="54" fill="#8B8468"/>
+          <rect x="534" y="70" width="126" height="54" fill="#5C7A5A"/>
+          <rect x="660" y="70" width="70" height="54" fill="#201D1A"/>
+        </g>
+        <g font-family="Source Serif 4,Georgia,serif" font-size="13" fill="#201D1A">
+          <text x="30" y="150">Food cost</text><text x="30" y="168" font-weight="bold" font-family="Red Hat Display,sans-serif">$9.80</text>
+          <text x="275" y="150">Commission</text><text x="275" y="168" font-weight="bold" font-family="Red Hat Display,sans-serif">$6.15</text>
+          <text x="429" y="150">Fees</text><text x="429" y="168" font-weight="bold" font-family="Red Hat Display,sans-serif">$2.50</text>
+          <text x="492" y="196">Packaging</text><text x="492" y="214" font-weight="bold" font-family="Red Hat Display,sans-serif">$1.70</text>
+          <text x="534" y="150">Labor share</text><text x="534" y="168" font-weight="bold" font-family="Red Hat Display,sans-serif">$5.05</text>
+          <text x="660" y="150">Left over</text><text x="660" y="168" font-weight="bold" font-family="Red Hat Display,sans-serif">$2.80</text>
+        </g>
+        <path d="M512 130 L512 186" stroke="#8B8468" stroke-width="1.5"/>
+        <text x="30" y="242" font-family="Source Serif 4,Georgia,serif" font-style="italic" font-size="12.5" fill="#6E6758">Worked example for illustration; the published guide walks through how to build this ledger from your own statements.</text>
+      </svg>
+      <figcaption>The full guide, "The anatomy of a $30 delivery order," is in editing now.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="notify" class="notify">
+  <div class="wrap grid">
+    <div>
+      <p class="kicker">Publication notices</p>
+      <h2>Hear when a guide ships. Nothing else.</h2>
+      <p style="max-width:52ch">One email per published guide — the title, the gist, the link. No newsletter padding, no vendor offers, and the list is never shared or sold.</p>
+    </div>
+    <form action="#" method="post" onsubmit="event.preventDefault();this.querySelector('.form-note').textContent='Thanks — notices begin when the first guide publishes. Nothing you typed left your browser.';">
+      <div>
+        <label for="nemail">Email</label>
+        <input id="nemail" name="email" type="email" required autocomplete="email" placeholder="owner@yourrestaurant.example">
+      </div>
+      <div>
+        <label for="nrole">Your role (optional)</label>
+        <input id="nrole" name="role" placeholder="Owner, GM, chef…">
+      </div>
+      <button class="btn" type="submit">Notify me</button>
+      <p class="form-note">Sign-ups open when the first guide publishes. Nothing you type here leaves your browser yet.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <h3>Restaurant Atlas</h3>
+      <p style="max-width:42ch;font-size:.93rem">An independent operator's reference on POS, delivery economics, and staffing. Sources attached, no sponsorships, no affiliate links.</p>
+    </div>
+    <div>
+      <h3>Reference</h3>
+      <a href="#index">The index</a>
+      <a href="#method">Method</a>
+      <a href="#notify">Publication notices</a>
+    </div>
+    <div>
+      <h3>Site</h3>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+    <div class="fineprint">
+      <span>© 2026 Restaurant Atlas. All rights reserved.</span>
+      <span>Guides listed in the index are in production and not yet published; figures shown are illustrative examples.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
